@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav, ul {
+    background: #222;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.drop1 {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul li:nth-child(2):hover .drop1 {
+    display: flex;
+}
+
+.drop1 li:nth-child(3):hover .drop2 {
+    display: flex;
+}
+
+.drop2 li:nth-child(3):hover .drop3 {
+    display: flex;
+}
+
+.drop3 li:nth-child(4):hover .drop4 {
+    display: flex;
+}
+
+.drop2, .drop3, .drop4 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+nav a {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    transition: all 0.1s ease-in-out;
+}
+
+nav a:hover {
+    background: #555;
+}
